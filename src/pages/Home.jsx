@@ -38,7 +38,7 @@ const Home = () => {
 
   const categories = [
     { name: "Cricket", img: "https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=400" },
-    { name: "Football", img: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=400" },
+    { name: "Football", img: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
     { name: "Basketball", img: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=400" },
     { name: "Tennis", img: "https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?w=400" },
   ];

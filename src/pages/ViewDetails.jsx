@@ -1,5 +1,5 @@
 import  { useEffect, useState } from 'react';
-import { useParams } from 'react'
+import { useParams } from 'react-router';
 import { Star, Truck, ShieldCheck, Clock, Layers } from 'lucide-react';
 
 const ViewDetails = () => {
