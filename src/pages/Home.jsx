@@ -22,7 +22,7 @@ const Home = () => {
     {
       title: "Gear Up for Championship Glory",
       subtitle: "Discover high-grade professional sports equipment engineered for endurance.",
-      bg: "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?w=1200"
+      bg: "https://images.unsplash.com/photo-1601039834076-c41cf1766d4b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       title: "Dominate Every Court & Pitch",

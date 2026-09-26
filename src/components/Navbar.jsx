@@ -10,16 +10,12 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+    document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
+    setTheme(prevTheme => (prevTheme === 'dark' ? 'light' : 'dark'));
   };
 
   const navLinks = (
@@ -51,11 +47,11 @@ const Navbar = () => {
           <div className="flex items-center space-x-4">
             <button 
               onClick={toggleTheme} 
-              className="p-2 rounded-full bg-slate-800 hover:bg-slate-700 text-amber-400 transition"
+              className="p-2 rounded-full bg-slate-800 hover:bg-slate-700 text-amber-400 transition cursor-pointer"
               data-tooltip-id="theme-tooltip"
               data-tooltip-content={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} Mode`}
             >
-              {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5 text-slate-200" />}
+              {theme === 'dark' ? <Sun className="w-5 h-5 text-amber-400" /> : <Moon className="w-5 h-5 text-slate-200" />}
             </button>
             <Tooltip id="theme-tooltip" />
 
@@ -71,7 +67,7 @@ const Navbar = () => {
                 <Tooltip id="user-tooltip" />
                 <button 
                   onClick={logoutUser}
-                  className="bg-red-500 hover:bg-red-600 text-white px-3 py-1.5 rounded-lg text-sm font-semibold flex items-center space-x-1 transition"
+                  className="bg-red-500 hover:bg-red-600 text-white px-3 py-1.5 rounded-lg text-sm font-semibold flex items-center space-x-1 transition cursor-pointer"
                 >
                   <LogOut className="w-4 h-4" />
                   <span className="hidden lg:inline">Log Out</span>
@@ -84,7 +80,7 @@ const Navbar = () => {
               </div>
             )}
 
-            <button onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2 text-slate-300 hover:text-white">
+            <button onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2 text-slate-300 hover:text-white cursor-pointer">
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
